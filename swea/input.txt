@@ -1,19 +1,4 @@
-2
-10
-cozy
-lummox
-gives
-smart
-squid
-who
-asks
-for
-job
-pen
-6
-abcdefghi
-jklmnopqr
-stuvwxyz
-zyxwvuts
-rqponmlkj
-ihgfedcba
+3
+100 0 1
+200 12 10
+10000 100 100
