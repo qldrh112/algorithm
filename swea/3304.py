@@ -23,6 +23,34 @@
 1
 acaykp capcak
 
+-> acak
+
 [출력]
 #1 4
 """
+import sys
+
+sys.stdin = open('input.txt', 'r')
+
+
+def solution(s1, s2):
+    # s1 < s2가 되게 정렬
+    if s1 > s2:
+        s2, s1 = s1, s2
+    dp = [0] * len(s2)
+
+    for i in range(len(s2)):
+        for j in range(min(i + 1, len(s1))):
+            if s1[j] == s2[i]:
+                dp[i] += 1
+
+
+    print(s1, s2)
+    return 'k' in s2
+
+
+if __name__ == '__main__':
+    T = int(input())
+    for x in range(T):
+        input_string1, input_string2 = input().split()
+        print(f'#{x + 1} {solution(input_string1, input_string2)}')

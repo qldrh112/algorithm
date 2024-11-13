@@ -31,5 +31,24 @@
 #1 DRAW
 #2 ALICE
 #3 BOB
-
 """
+
+import sys
+
+sys.stdin = open('input.txt', 'r')
+
+
+def solution(a_win, a_play, b_win, b_play):
+    if a_win / a_play > b_win / b_play:
+        return 'ALICE'
+    elif a_win / a_play < b_win / b_play:
+        return 'BOB'
+    else:
+        return 'DRAW'
+
+
+if __name__ == '__main__':
+    T = int(input())
+    for x in range(T):
+        A, B, C, D = map(int, input().split())
+        print(f'#{x + 1} {solution(A, B, C, D)}')
